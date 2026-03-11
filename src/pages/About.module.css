@@ -1,0 +1,158 @@
+
+.about {
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 40px;
+  background: white;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(30,115,255,0.25);
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+
+.profileImage {
+
+  width: 220px;
+  height: 220px;
+  border-radius: 12px;
+  border: 4px solid #84b0f5;
+  box-shadow: 0 8px 20px rgba(30,115,255,0.25);
+}
+
+
+.headline h1 {
+  font-size: 34px;
+  color: #1e73ff;
+  margin-bottom: 8px;
+}
+
+.headline h2 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 18px;
+}
+
+.headline p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #555;
+  margin-bottom: 12px;
+}
+
+.skills {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 40px;
+  background: white;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(30,115,255,0.25);
+}
+
+.skills h2 {
+  color: #1e73ff;
+  margin-bottom: 20px;
+}
+
+.skills p {
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.skills ul {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0;
+}
+
+.skills li {
+  background: #f5f9ff;
+  display: inline-block;
+  padding: 8px 14px;
+  margin: 6px;
+  border-radius: 8px;
+  border: 1px solid #d9e6ff;
+  font-size: 14px;
+}
+
+.Biography {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 40px;
+  background: white;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(30,115,255,0.25);
+}
+
+.Biography p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #444;
+  margin-bottom: 14px;
+}
+
+.profile-title {
+  text-align: center;
+  margin-top: 10px;
+  font-weight: 600;
+  color: #1e73ff;
+}
+
+/* Tablets */
+@media (max-width: 900px){
+
+  .about{
+    flex-direction: column;
+    text-align: center;
+    gap: 25px;
+  }
+
+  .profileImage{
+    width: 180px;
+    height: 180px;
+  }
+
+  .headline h1{
+    font-size: 28px;
+  }
+
+  .headline h2{
+    font-size: 18px;
+  }
+
+}
+/* Mobile */
+@media (max-width: 600px){
+
+  .about,
+  .skills,
+  .Biography{
+    margin: 25px 15px;
+    padding: 25px;
+  }
+
+  .profileImage{
+    width: 150px;
+    height: 150px;
+  }
+
+  .headline h1{
+    font-size: 24px;
+  }
+
+  .headline h2{
+    font-size: 16px;
+  }
+
+  .headline p,
+  .Biography p{
+    font-size: 14px;
+  }
+
+  .skills li{
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+
+}
