@@ -1,27 +1,22 @@
-
-nav {
+.navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 40px;
   height: 60px;
   background-color: #ffffff;
-  
 }
 
-nav .Logo {
-  font-weight: bold;
-  font-size: 60px;
-  color: #0362fa
-
-}
+/* logo */
 
 .logo {
   font-weight: bold;
-  font-size: 60px;
+  font-size: 40px;
   color: #0362fa;
   cursor: pointer;
 }
+
+/* spin animation */
 
 .rotate {
   animation: spin 0.6s ease;
@@ -35,17 +30,22 @@ nav .Logo {
     transform: rotate(360deg);
   }
 }
-nav ul {
+
+/* menu */
+
+.menu {
   list-style: none;
   display: flex;
   gap: 25px;
 }
 
-nav ul li {
+.menu li {
   position: relative;
 }
 
-nav ul li ul {
+/* dropdown */
+
+.dropdown {
   display: none;
   position: absolute;
   top: 100%;
@@ -55,13 +55,24 @@ nav ul li ul {
   padding: 10px 0;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  min-width: 160px;
+  text-align: center;
 }
 
-nav ul li:hover ul {
+.menu li:hover .dropdown {
   display: block;
 }
 
-nav ul li a {
+.dropdown li a {
+  display: block;
+  font-size: 14px;
+  padding: 8px 15px;
+  text-align: center;
+}
+
+/* links */
+
+.menu li a {
   text-decoration: none;
   color: #333;
   font-weight: 500;
@@ -69,55 +80,48 @@ nav ul li a {
   transition: color 0.2s;
 }
 
-nav ul li a:hover {
+.menu li a:hover {
   color: #1e73ff;
 }
 
+/* hamburger icon */
 
-/* Tablets */
-
-@media (max-width: 900px){
-
-  nav{
-    padding: 0 20px;
-  }
-
-  .logo{
-    font-size: 40px;
-  }
-
-  nav ul{
-    gap: 18px;
-  }
-
+.menuIcon {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
 }
 
-
-/* Mobile */
+/* mobile */
 
 @media (max-width: 600px){
 
-  nav{
-    flex-direction: column;
-    height: auto;
-    padding: 15px;
+  .menuIcon{
+    display:block;
   }
 
-  .logo{
-    font-size: 32px;
-    margin-bottom: 10px;
+  .menu{
+    position:absolute;
+    top:60px;
+    left:0;
+    width:100%;
+    background:#fff;
+    flex-direction:column;
+    align-items:center;
+    gap:15px;
+    display:none;
+    padding:20px 0;
+    box-shadow:0 6px 15px rgba(0,0,0,0.1);
   }
 
-  nav ul{
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
+  .active{
+    display:flex;
   }
 
-  nav ul li ul{
+  .dropdown{
     position: static;
-    border: none;
-    box-shadow: none;
+    border:none;
+    box-shadow:none;
   }
 
 }
