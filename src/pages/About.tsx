@@ -39,6 +39,7 @@ function About(){
                   <ul>
                     <li>React</li>
                     <li>Next.js</li>
+                    <li>Vue.js</li>
                     <li>TypeScript</li>
                 </ul>
                 <ul>
@@ -48,13 +49,42 @@ function About(){
                 </ul>
 
             <b></b>
+            
+            <p>UX - UI</p>
+                <ul>
+                    <li>User Flows</li>
+                    <li>Prototyping</li>    
+                    <li>Usability Testing</li>
+                    <li>Wireframing</li>  
+                    <li>Accessibility (WCAG)</li>
+                </ul>
+
+            <b></b>
+            
+              <p>API & Frontend Integration</p>
+                <ul>
+                    <li>RESTful APIs</li>
+                    <li>JSON data</li>    
+                </ul>
+
+            <b></b>
+
+            <p>Programming Languages</p>
+                <ul>
+                    <li>Python</li>
+                    <li>Java</li>    
+                </ul>
+
+            <b></b>
 
             <p>Tools</p>
                 <ul>
                     <li>Git & GitHub</li>
                     <li>Vite</li>
                     <li>Figma</li>
-                    <li>REST APIs</li>
+                    <li>Docker</li>
+                    <li>CI/CD pipelines</li>
+
                 </ul>
         </section>
 

@@ -19,6 +19,9 @@ function Navbar() {
     setMenuOpen(!menuOpen);
   }
 
+  function closeMenu() {
+  setMenuOpen(false);
+}
   return (
     <nav className={styles.navbar}>
 
@@ -35,8 +38,9 @@ function Navbar() {
         ☰
       </div>
 
-      <ul className={`${styles.menu} ${menuOpen ? styles.active : ""}`}>
-
+      <ul className={`${styles.menu} ${menuOpen ? styles.active : ""}`}
+        onClick={closeMenu}
+      >
         <li>
           <Link to="/">Home</Link>
         </li>
