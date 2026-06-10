@@ -3,34 +3,35 @@ import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 
 function Contact() {
+
   const form = useRef<HTMLFormElement>(null);
 
- const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
-  e.preventDefault();
+  // این تابع وقتی فرم submit میشه اجرا میشه
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
 
-  const formData = new FormData(e.currentTarget);
+    // تست اینکه تابع اجرا شده
+    alert("FORM IS WORKING");
+    console.log("FORM IS WORKING");
 
-  emailjs.send(
-    'service_07x17fi',
-    'template_jkdc1ko',
-    {
-      user_name: formData.get('user_name'),
-      user_contact: formData.get('user_contact'),
-      message: formData.get('message'),
-    },
-    'YOUR_PUBLIC_KEY'
-  )
-  .then((res) => {
-    console.log("SUCCESS:", res.status);
-    alert("Message Sent!");
-  })
-  .catch((err) => {
-    console.log("ERROR:", err);
-  });
+    // اگر ref هنوز آماده نیست، ادامه نده
+    if (!form.current) return;
 
-  e.currentTarget.reset();
-};
-  
+    // ارسال ایمیل با EmailJS
+    emailjs
+      .sendForm(
+        "service_07x17fi",
+        "template_jkdc1ko",
+        form.current,
+        "tmAyFilXBVhscetSr"
+      )
+      .then((result) => {
+        console.log("SUCCESS", result.text);
+      })
+      .catch((error) => {
+        console.log("ERROR", error.text);
+      });
+  };
 
   return (
     <form
