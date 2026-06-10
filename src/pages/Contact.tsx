@@ -6,18 +6,14 @@ function Contact() {
 
   const form = useRef<HTMLFormElement>(null);
 
-  // این تابع وقتی فرم submit میشه اجرا میشه
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    // تست اینکه تابع اجرا شده
     alert("FORM IS WORKING");
     console.log("FORM IS WORKING");
 
-    // اگر ref هنوز آماده نیست، ادامه نده
     if (!form.current) return;
 
-    // ارسال ایمیل با EmailJS
     emailjs
       .sendForm(
         "service_07x17fi",
@@ -25,11 +21,11 @@ function Contact() {
         form.current,
         "tmAyFilXBVhscetSr"
       )
-      .then((result) => {
-        console.log("SUCCESS", result.text);
+      .then((res) => {
+        console.log("SUCCESS:", res);
       })
-      .catch((error) => {
-        console.log("ERROR", error.text);
+      .catch((err) => {
+        console.log("ERROR FULL:", err);
       });
   };
 
