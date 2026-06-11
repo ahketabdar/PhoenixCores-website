@@ -11,7 +11,8 @@ function Contact() {
 
     alert("We will respond to your request whithin 72 hours");
     console.log("FORM IS WORKING");
-
+    console.log("TEMPLATE:", "template_xxxxx");
+    
     if (!form.current) return;
 
     emailjs
