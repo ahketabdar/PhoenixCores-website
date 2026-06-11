@@ -9,7 +9,7 @@ function Contact() {
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    alert("FORM IS WORKING");
+    alert("We will respond to your request whithin 72 hours");
     console.log("FORM IS WORKING");
 
     if (!form.current) return;
